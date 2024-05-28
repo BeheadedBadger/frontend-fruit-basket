@@ -6,7 +6,8 @@ function App() {
     const [lastName, setLastName] = React.useState("");
     const [age, setAge] = React.useState(0);
     const [postalCode, setPostalCode] = React.useState("");
-
+    const [frequency, setFrequency] = React.useState("");
+    const [timeSlot, setTimeSlot] = React.useState("");
     const [comments, setComments] = React.useState("");
     const [termsOfService, toggleTermsOfService] = React.useState(false);
 
@@ -19,7 +20,7 @@ function App() {
             <div className="fruit-card">
                 <p>Bananen 🍌</p>
                 <div className="plusminus"><button onClick={() => setBananas(bananas && (bananas - 1))}>-</button>
-                <field><p>{bananas}</p></field>
+                <p>{bananas}</p>
                 <button onClick={() => setBananas(bananas + 1)}>+</button>
                 </div>
             </div>
@@ -47,8 +48,21 @@ function App() {
                            onChange={(e) => setPostalCode(e.target.value)}/>
                 </div>
 
-                {/* TODO: >Select box
-                TODO: Radio buttons*/}
+                <div className="form-field">
+                    <label htmlFor="frequency">Frequency:</label>
+                    <select name="frequency" id="frequency" value={frequency}
+                            onChange={(e) => setFrequency(e.target.value)}>
+                        <option value="every-week">Every week</option>
+                        <option value="every-other-week">Every other week</option>
+                        <option value="every-month">Every month</option>
+                    </select>
+                </div>
+
+                <p>Time slot:</p>
+                <input type="radio" id="afternoon" name="time-slot" value="afternoon" onChange={(e) => setTimeSlot(e.target.value)}/>
+                <label htmlFor="afternoon">Afternoon</label>
+                <input type="radio" id="evening" name="time-slot" value="evening" onChange={(e) => setTimeSlot(e.target.value)}/>
+                <label htmlFor="evening">Evening</label>
 
                 <label htmlFor="comments">Comments:</label>
                 <textarea rows="20" cols="100" id="comments" name="comments" value={comments}
@@ -64,6 +78,7 @@ function App() {
                        onClick={() => {
                            console.log("Order = " + "Bananas: " + bananas + "\n" +
                                "Name:" + firstName + " " + lastName + " Age:" + age + " Agrees to terms of service=" + termsOfService + "\n"
+                               + "Frequency:" + frequency + " Time slot:" + timeSlot + "\n"
                                + "Comments: " + comments)
                        }}/>
             </form>
