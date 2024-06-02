@@ -1,33 +1,72 @@
-.form-field {
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+:root {
+    font-family: "Averia Sans Libre", sans-serif;
+    background: #1D1A31;
+    color: #F08CAE;
 }
 
-.fruit-card {
+h1 {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: left;
+    margin: 20px;
+}
+
+.order-card {
+    background: linear-gradient(180deg, #F08CAE 0%, #9A4C95 100%);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+
+.form-card {
+    background: linear-gradient(180deg, #F08CAE 0%, #9A4C95 100%);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 40px;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+form {
+    color: white;
+}
+
+label, input, select {
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-field {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-radius: 40px;
-    background-color: darkslategrey;
-    width: 50%;
+    padding: 20px;
+    height: 20px;
+    width: 350px;
 }
 
-.fruit-card p {
-    color: white;
-    margin: 10px 10px 10px 30px;
-}
-
-.fruit-card button {
-    border-radius: 15px;
-    margin: 5px;
-    width:30px;
-    height: 30px;
-}
-
-.plusminus {
+.comments {
     display: flex;
-    flex-direction: row;
-}
-.plusminus p {
-    margin: 10px;
+    flex-direction: column;
+    margin: 20px;
 }

@@ -1,0 +1,18 @@
+.resetsend button:hover, button:active {
+    color: #1D1A31;
+}
+
+.resetsend {
+    width: 30%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+}
+
+.resetsend p {
+    font-size: 30px;
+    margin: 0;
+}

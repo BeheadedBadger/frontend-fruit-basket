@@ -1,0 +1,32 @@
+.buttons {
+    display: flex;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
+}
+
+.buttons p {
+    margin: 10px;
+    text-align: center;
+}
+
+button {
+    background: #F08CAE;
+    border: 1px solid #F08CAE;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover, button:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #F08CAE;
+}
+
+button:active {
+    opacity: .5;
+}
